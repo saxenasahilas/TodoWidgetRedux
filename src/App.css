@@ -1,0 +1,129 @@
+/* Reset some default styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width:996px){
+  .App{
+    padding:60px 25px;
+  }
+  
+  .todo-container{
+    flex:1;
+    width:100%;
+    font-size: 5px
+  }
+}
+
+/* Styles for the main application container */
+.App {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #000;
+ 
+}
+
+/* Styles for checkboxes within the App component */
+.App input[type="checkbox"] {
+  margin-right: 10px;
+  height:1rem;
+}
+
+/* Styles for the todo container */
+.App .todo-container {
+  padding: 25px;
+  border-radius: 10px;
+  font-weight: 300;
+  background-color: whitesmoke;
+  position: relative;
+}
+
+.todo-container:after{
+  position: absolute;
+  content: '';
+  right:40px;
+  bottom:-8.5px;
+  height: 18px;
+  width: 18px;
+  transform: rotate(45deg);
+  background-color: whitesmoke;
+}
+
+.todo-container .todo-title{
+  position:absolute;
+  right: 31.6px;
+  bottom: -45px;
+  color: whitesmoke;
+}
+
+/* Styles for task containers within the todo container */
+.todo-container .task-container {
+  margin-bottom: 10px;
+}
+
+/* Styles for individual todo items */
+.todo-container .todo-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* Styles for h3 headings */
+h3, select {
+  font-size: 1.44rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+/* Styles for paragraphs and input elements */
+p, input {
+  font-size: 1rem;
+  letter-spacing: .3px;
+}
+
+p:first-letter{
+  text-transform: uppercase;
+}
+input{
+  background: transparent;
+}
+
+/* Styles for text input elements */
+input[type='text'] {
+  padding: 10px 0px;
+}
+
+input[type='text'], select{
+  border: none;
+  outline: none;
+}
+
+/* Styles for the text input when it's focused */
+input:focus, input:hover{
+  border-bottom: 1px solid #000 !important;
+}
+
+/* Styles for completed tasks */
+.task-completed {
+  text-decoration: line-through;
+  font-weight: 100;
+}
+
+/* Styles for date dropdowns */
+.date-dropdown {
+  border: none;
+  background: transparent;
+}
+
+/* Styles for the ellipsis icon */
+.ellipsis {
+  float: right;
+  font-weight: bolder;
+  color: gray;
+  cursor: pointer;
+}
